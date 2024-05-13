@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+    "
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/65bf1228a2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container col-lg-12 col-md-12 col-sm-12">
+      <h4>Random Password Generator</h4>
+      <div class="password-screen mt-5 mb-4">
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="At least select one checkbox for password"
+          aria-label=".form-control-lg example"
+        />
+        <i onclick="copied()" class="fa-regular fa-copy"></i>
+      </div>
+   
+      <label for="customRange1" class="form-label">Password Length</label>
+      <span id="slider-value"></span>
+      <div class="Password-length">
+        <input
+          type="range"
+          class="form-range"
+          id="customRange1"
+          min="1"
+          max="10"
+        />
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="flexCheckDefault1" />
+        <label class="form-check-label" for="flexCheckDefault1">
+          Include Uppercase Letters(A-Z)
+        </label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="flexCheckDefault2" />
+
+        <label class="form-check-label" for="flexCheckDefault2">
+          Include Lowercase Letters(a-z)
+        </label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="flexCheckDefault3" />
+
+        <label class="form-check-label" for="flexCheckDefault3">
+          Include Symbols(@-#)
+        </label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="flexCheckDefault4" />
+
+        <label class="form-check-label" for="flexCheckDefault4">
+          Include Numbers(0-9)
+        </label>
+      </div>
+
+      <div class="d-grid gap-2 Generate-button mt-4">
+        <button
+          class="btn btn-primary"
+          onclick="passwordGenerate()"
+          type="button"
+        >
+          Generate Password
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
